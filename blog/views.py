@@ -11,3 +11,7 @@ def index(request):
 def post_detail(request, slug):
   post = get_object_or_404(Post, slug=slug)
   return render(request, "blog/post-detail.html", {"post": post})
+
+def get_ip(request):
+  from django.http import HttpResponse
+  return HttpResponse(request.META['REMOTE_ADDR'])
