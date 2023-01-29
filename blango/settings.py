@@ -67,7 +67,7 @@ class Dev(Configuration):
 
     ROOT_URLCONF = 'blango.urls'
 
-    INTERNAL_IPS = ["192.168.11.179"]
+    INTERNAL_IPS = ["192.168.10.93"]
 
     TEMPLATES = [
         {
