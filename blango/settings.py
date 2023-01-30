@@ -52,7 +52,10 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         'blog',
         "debug_toolbar",
+        "blango_auth",
     ]
+
+    AUTH_USER_MODEL = "blango_auth.User"
 
     MIDDLEWARE = [
         "debug_toolbar.middleware.DebugToolbarMiddleware",

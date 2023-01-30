@@ -1,0 +1,20 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$f8CTLcK6v9bHNvHqDxbnlz$j+cADr9NAZ9aBDQOLosQ6ffUWCxpGxrkTv0yqjiXW34=",
+      "last_login": "2022-12-31T15:52:57.791Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Sum",
+      "last_name": "Plucena",
+      "email": "admin@email.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-12-30T02:15:39Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
