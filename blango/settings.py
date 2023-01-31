@@ -16,7 +16,7 @@ from configurations import Configuration, values
 import dj_database_url
 
 class Dev(Configuration):
-
+    SITE_ID = 1
     # Build paths inside the project like this: BASE_DIR / 'subdir'.
     BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -48,12 +48,17 @@ class Dev(Configuration):
         'django.contrib.auth',
         'django.contrib.contenttypes',
         'django.contrib.sessions',
+        "django.contrib.sites",
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'crispy_forms',
         'blog',
         "debug_toolbar",
         "blango_auth",
+        "allauth", 
+        "allauth.account", 
+        "allauth.socialaccount", 
+        "allauth.socialaccount.providers.google",
     ]
 
     AUTH_USER_MODEL = "blango_auth.User"
@@ -155,6 +160,11 @@ class Dev(Configuration):
 
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
     ACCOUNT_ACTIVATION_DAYS = 7
+
+    ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+    ACCOUNT_EMAIL_REQUIRED = True
+    ACCOUNT_USERNAME_REQUIRED = False
+    ACCOUNT_AUTHENTICATION_METHOD = "email"
 
 class Prod(Dev):
   DEBUG = False
